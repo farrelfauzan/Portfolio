@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     fontSize: {
       xs: '0.75rem',
@@ -15,6 +18,7 @@ module.exports = {
       '6xl': '4rem',
     },
     extend: {
+      screens: { xs: { max: '640px' } },
       colors: {
         gray: {
           100: '#f7fafc',
@@ -41,5 +45,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('flowbite/plugin')],
 };
