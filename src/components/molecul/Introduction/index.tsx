@@ -15,7 +15,7 @@ export const Introduction = () => {
         width={200}
         height={200}
       />
-      <div className="mx-8 flex h-96 w-1/2 flex-col rounded-[15px] bg-blue-400 sm:w-full md:w-full xl:w-1/2 2xl:w-1/2 xs:mx-0 xs:h-80 xs:w-full">
+      <div className="mx-8 flex h-96 w-1/2 flex-col rounded-[15px] bg-blue-400 shadow-lg shadow-cyan-500/100 sm:w-full md:w-full xl:w-1/2 2xl:w-1/2 xs:mx-0 xs:h-80 xs:w-full">
         <div className="flex flex-col justify-start px-20 pt-8">
           <span className="text-3xl font-bold text-purple-800 xs:text-lg">
             Looking For A Web Developer ?
@@ -97,7 +97,7 @@ export const Introduction = () => {
         <div>
           <Image
             alt=""
-            className="absolute left-[1190px] top-[200px] h-[200px] w-[200px] "
+            className="absolute left-[1190px] top-[200px] h-[200px] w-[200px]"
             src="/assets/images/flying-saucer.svg"
             width={600}
             height={600}
@@ -105,7 +105,7 @@ export const Introduction = () => {
           <div>
             <Image
               alt=""
-              className="absolute left-[1272px] top-[370px] h-[350px] w-[300px] rounded-full brightness-110 contrast-125 xs:top-[563px] xs:left-1 xs:ml-12"
+              className="absolute left-[1272px] top-[370px] h-[350px] w-[300px] rounded-full shadow-lg shadow-cyan-500/100 brightness-110 contrast-125 xs:top-[563px] xs:left-1 xs:ml-12"
               src="/assets/images/IMG_0209.jpg"
               width={400}
               height={800}
