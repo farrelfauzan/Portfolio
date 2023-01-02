@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 
 import { Navigation } from '@/components/Navigation';
 
+import bg from '../../public/assets/images/background-portfolio.png';
+
 type IMainProps = {
   meta: ReactNode;
   children: ReactNode;
@@ -12,8 +14,9 @@ const Main = (props: IMainProps) => (
     {props.meta}
     <div
       style={{
-        backgroundImage: `url('https://cdn.dribbble.com/userupload/3274746/file/original-c4c6dc1fbc4277fb6159b83edc7d2ef9.png?compress=1&resize=1905x1072')`,
+        backgroundImage: `url(${bg.src})`,
       }}
+      className="h-full"
     >
       <Navigation />
       {props.children}

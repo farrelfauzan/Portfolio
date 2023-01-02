@@ -17,7 +17,7 @@ export const Navigation = () => {
         <Navbar.Link href="/" className="text-white">
           Home
         </Navbar.Link>
-        <Navbar.Link href="/" className="text-white">
+        <Navbar.Link href="/about" className="text-white">
           About
         </Navbar.Link>
         <Navbar.Link href="/" className="text-white">
