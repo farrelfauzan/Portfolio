@@ -1,6 +1,10 @@
 import { Navbar } from 'flowbite-react';
+import { useRouter } from 'next/router';
+
+import { NavList } from './NavList';
 
 export const Navigation = () => {
+  const router = useRouter();
   return (
     <Navbar
       className="relative z-50 mx-auto w-11/12 bg-transparent pt-3 lg:pt-5"
@@ -14,21 +18,19 @@ export const Navigation = () => {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Navbar.Link href="/" className="text-white">
-          Home
-        </Navbar.Link>
-        <Navbar.Link href="/" className="text-white">
-          About
-        </Navbar.Link>
-        <Navbar.Link href="/" className="text-white">
-          Carrers
-        </Navbar.Link>
-        <Navbar.Link href="/" className="text-white">
-          Projects
-        </Navbar.Link>
-        <Navbar.Link href="/" className="text-white">
-          Contact
-        </Navbar.Link>
+        {NavList.map((nav, index) => {
+          const isActive = router.pathname === nav.path;
+          return (
+            <Navbar.Link
+              className={isActive ? '!text-yellow-400' : 'text-white'}
+              href={nav.path}
+              key={index}
+              active={isActive}
+            >
+              {nav.name}
+            </Navbar.Link>
+          );
+        })}
       </Navbar.Collapse>
     </Navbar>
   );

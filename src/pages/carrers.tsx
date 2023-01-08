@@ -1,8 +1,8 @@
-import { IntroSection } from '@/components/Intro';
+import { CarrerTimeLine } from '@/components/CarrerTimeLine';
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
-const Index = () => {
+const Carrers = () => {
   return (
     <Main
       meta={
@@ -12,9 +12,9 @@ const Index = () => {
         />
       }
     >
-      <IntroSection />
+      <CarrerTimeLine />
     </Main>
   );
 };
 
-export default Index;
+export default Carrers;
