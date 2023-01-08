@@ -9,19 +9,22 @@ type IMainProps = {
   children: ReactNode;
 };
 
-const Main = (props: IMainProps) => (
-  <div className="w-full text-gray-500 antialiased">
-    {props.meta}
-    <div
-      style={{
-        backgroundImage: `url(${bg.src})`,
-      }}
-      className="h-full"
-    >
-      <Navigation />
-      {props.children}
+const Main = (props: IMainProps) => {
+  console.log('ini props', props.children?.type?.name);
+  return (
+    <div className="w-full text-gray-500 antialiased">
+      {props.meta}
+      <div
+        style={{
+          backgroundImage: `url(${bg.src})`,
+        }}
+        className="h-full bg-cover"
+      >
+        <Navigation />
+        {props.children}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { Main };
