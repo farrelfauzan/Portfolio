@@ -1,7 +1,12 @@
 import { Button } from 'flowbite-react';
+import { useRouter } from 'next/dist/client/router';
 
 /* eslint-disable react/no-unescaped-entities */
 export const SelfExplaination = () => {
+  const router = useRouter();
+  const MoveToCarrers = () => {
+    router.push('/carrers');
+  };
   return (
     <div className="flex justify-center pb-64 pt-32">
       <div className=" w-1/2 rounded-[15px] bg-blue-400 py-8 shadow-lg shadow-cyan-500/100">
@@ -32,7 +37,9 @@ export const SelfExplaination = () => {
           mastered in click the buttons below.
         </p>
         <div className="flex h-32 flex-col items-center justify-between">
-          <Button className="w-fit">Carrers</Button>
+          <Button className="w-fit" onClick={() => MoveToCarrers()}>
+            Carrers
+          </Button>
           <Button className="w-fit">Experience in programming </Button>
         </div>
       </div>

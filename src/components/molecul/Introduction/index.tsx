@@ -2,9 +2,11 @@
 /* eslint-disable no-nested-ternary */
 import { Button } from 'flowbite-react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export const Introduction = () => {
+  const router = useRouter();
   const [choose, setChoose] = useState('');
   return (
     <div className="flex justify-start p-24 xs:p-2">
@@ -72,7 +74,14 @@ export const Introduction = () => {
             >
               Take Me Home
             </Button>
-            <Button className="focus:!outline-0 focus:!ring-0">Explore</Button>
+            <Button
+              onClick={() => {
+                router.push('/carrers');
+              }}
+              className="focus:!outline-0 focus:!ring-0"
+            >
+              Explore
+            </Button>
           </div>
         ) : (
           <div className="flex w-full justify-between px-[350px] py-24 xs:p-10 xs:py-32">

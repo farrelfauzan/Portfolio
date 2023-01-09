@@ -12,10 +12,6 @@ export const NavList = [
     path: '/carrers',
   },
   {
-    name: 'Projects',
-    path: '/projects',
-  },
-  {
     name: 'Contact',
     path: '/contact',
   },

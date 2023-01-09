@@ -1,10 +1,22 @@
 /* eslint-disable no-constant-condition */
 import { Button, Timeline } from 'flowbite-react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
+import { AstronautAnimation } from '../AstronautAnimation';
 import { TimelineList } from './TimlineList';
 
 export const CarrerTimeLine = () => {
+  const router = useRouter();
+  const MoveToDetailPages = (index: number) => {
+    if (index === 3) {
+      router.push('/carrers/BinarAcademy');
+    } else if (index === 2) {
+      router.push('/carrers/UniversitasIndonesia');
+    } else if (index === 4) {
+      router.push('carrers/Embreo');
+    }
+  };
   return (
     <div className="flex h-full flex-row pb-64 pt-20 pl-32">
       <Timeline className="flex h-screen w-1/2 flex-col pl-4">
@@ -30,15 +42,17 @@ export const CarrerTimeLine = () => {
               <Timeline.Body className="text-gray-400">
                 {timeline.desc}
               </Timeline.Body>
-              {index === 2 || index === 3 ? (
-                <Button color="purple">More</Button>
+              {index === 2 || index === 3 || index === 4 ? (
+                <Button onClick={() => MoveToDetailPages(index)} color="purple">
+                  More
+                </Button>
               ) : null}
             </Timeline.Item>
           );
         })}
       </Timeline>
-      <div className="w-1/2 items-center text-center text-3xl text-white">
-        This section will be detailed of your achivement
+      <div className="w-1/2 items-center pl-32 pt-32 text-3xl text-white">
+        <AstronautAnimation />
       </div>
     </div>
   );

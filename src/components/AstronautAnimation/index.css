@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
+body{
+  background-color: #232338;
+  text-align: center;
+}
 .arm-left{
 animation: armSwipe 5s 1s infinite ease-in-out;
 transform-origin: left top;
@@ -21,62 +20,12 @@ transform-origin: left top;
   50%{transform: rotate(-5deg);}
     100%{transform: rotate(-1deg);}
 }
-.astronaut1{
+.astronaut{
   width: 50%;
   height: auto;
   overflow: visible;
   animation: Levitation 5s 1s infinite ease-in-out;
 }
-
-.moon{
-  position: absolute; 
-  top: 300px;
-  right: 100px;
-  animation-name: lunamove;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
-
-.astronaut2{
-  position: absolute; 
-  top: 250px;
-  left: 41px;
-  transform: scaleX(-1);
-  animation-name: astromove;
-  animation-duration: 2s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-}
-
-@keyframes astromove{
-  from{
-    top: 200px;
-    width: 270px;
-  }
-  to{
-    top: 250px;
-    width: 250px;
-  }
-}
-@keyframes lunamove{
-  from{
-    top: 290px;
-  }
-  top{
-    top: 300px;
-  }
-}
-
-.animation{
-  position: absolute;
-  overflow: hidden; 
-  width: 500px;
-  height: 500px;
-  background-color: #000;
-  bottom: 0;
-}
-
 @keyframes Levitation{
   0%{transform: translateY(100px);}
   50%{transform: translateY(80px); }

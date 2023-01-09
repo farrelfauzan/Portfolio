@@ -10,7 +10,7 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => {
-  console.log('ini props', props.children?.type?.name);
+  // console.log('ini props', props.children?.type?.name);
   return (
     <div className="w-full text-gray-500 antialiased">
       {props.meta}
