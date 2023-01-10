@@ -42,7 +42,7 @@ export const CarrerTimeLine = () => {
               <Timeline.Body className="text-gray-400">
                 {timeline.desc}
               </Timeline.Body>
-              {index === 2 || index === 3 || index === 4 ? (
+              {index === 3 || index === 4 ? (
                 <Button onClick={() => MoveToDetailPages(index)} color="purple">
                   More
                 </Button>

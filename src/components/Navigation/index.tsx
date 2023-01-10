@@ -22,7 +22,6 @@ export const Navigation = () => {
           const ActivePath = router.pathname.slice(1).split('/');
           const OriginalPath = nav.path.slice(1).split('/');
           const isActive = ActivePath[0] === OriginalPath[0];
-          console.log(ActivePath[0], OriginalPath[0]);
           return (
             <Navbar.Link
               className={isActive ? '!text-yellow-400' : 'text-white'}
